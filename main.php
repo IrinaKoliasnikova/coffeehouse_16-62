@@ -1,7 +1,7 @@
 <?php require_once './functions/connect.php';?>
 <?php
 
-$sql = $pdo->prepare("SELECT * FROM first_screen, about, review, gallery");
+$sql = $pdo->prepare("SELECT * FROM first_screen, about, gallery");
 $sql->execute();
 $res=$sql->fetch(PDO::FETCH_ASSOC);
 
@@ -101,7 +101,7 @@ $res=$sql->fetch(PDO::FETCH_ASSOC);
 
 		</div>
 
-		<article class="review">
+				<article class="review">
 			<div class="container">
 
 	   		<h2>Отзывы</h2>
@@ -113,51 +113,51 @@ $res=$sql->fetch(PDO::FETCH_ASSOC);
 					<div class="head">
 					    <div class="round"></div>
 					    <div class="h">
-					    	<p><?php echo $res["name"] ?></p>
-					        <p class="star" style="color: #D0A73E; font-size: 20px"><?php echo $res["star"] ?></p>
+					    	<p>Лиза Г.</p>
+					        <p class="star" style="color: #D0A73E; font-size: 20px">★★★★★</p>
 					    </div>
-					    <p class="date"><?php echo $res["data"] ?></p>
+					    <p class="date">22.08.23</p>
 					</div>
 
-					<p class="r"><?php echo $res["view"] ?></p>
+					<p class="r">Отличное место. Вкусные напитки. Выбор кофе, как холодного, так и горячего. Коктейли вкусные. Есть десерты, <br>мороженое. Работает кондиционер, удобные столики. Оформление в стиле истории города, рисунки Натальи <br>Пантелеевой. Это круто. Можно посидеть на улице.</p>
 				</div>
 
 				<div class="carousel-item">
 				   	<div class="head">
 					   	<div class="round"></div>
 					    <div class="h">
-					        <p><?php echo $res["names"] ?></p>
-					        <p class="star" style="color: #D0A73E; font-size: 20px"><?php echo $res["stars"] ?></p>
+					        <p>Андрей</p>
+					        <p class="star" style="color: #D0A73E; font-size: 20px">★★★★★</p>
 					    </div>
-					    <p class="date"><?php echo $res["datas"] ?></p>
+					    <p class="date">25.02.23</p>
 					</div>
 
-					    <p class="r"><?php echo $res["views"] ?></p>
+					    <p class="r">Отличное заведение, вкусный кофе, брали Кокосовый и Лавандовый РАФ понравился вкус, хороший <br>сбалансированный не горчит, вкусные эклеры. Гости города из Екатеринбурга!!!</p>
 				</div>
 				
 					<div class="carousel-item">
 				    <div class="head">
 					    <div class="round"></div>
 					    <div class="h">
-					        <p><?php echo $res["nameth"] ?></p>
-					        <p class="star"  style="color: #D0A73E; font-size: 20px"><?php echo $res["starth"] ?></p>
+					        <p>Илья К.</p>
+					        <p class="star"  style="color: #D0A73E; font-size: 20px">★★★★★</p>
 					    </div>
-					    <p class="date"><?php echo $res["datath"] ?></p>
+					    <p class="date">19.12.22</p>
 					</div>
 
-					<p class="r"><?php echo $res["viewth"] ?></p>
+					<p class="r">Чисто. Тепло. ( Температура на улице -22 ) Уютно. Хороший кофе на любой вкус. Девушке продавцу - спасибо. За <br>оформление интерьера - лайк.</p>
 				</div>
 				<div class="carousel-item">
 				    <div class="head">
 					    <div class="round"></div>
 					    <div class="h">
-					        <p><?php echo $res["namef"] ?></p>
-					        <p class="star" style="color: #D0A73E; font-size: 20px"><?php echo $res["starf"] ?></p>
+					        <p>Евгений Кузнецов</p>
+					        <p class="star" style="color: #D0A73E; font-size: 20px">★★★★★</p>
 					    </div>
-					    <p class="date"><?php echo $res["dataf"] ?></p>
+					    <p class="date">20.05.22</p>
 					</div>
 
-					<p class="r"><?php echo $res["viewf"] ?></p>
+					<p class="r">Уютная кофейня. Со своей атмосферой, отсылом к истории города. Одно из лучших мест в своем роде)</p>
 				</div>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

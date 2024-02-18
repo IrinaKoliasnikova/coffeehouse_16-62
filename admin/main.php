@@ -32,7 +32,7 @@
 			<li>
 				<a class="nav-link" href="../logout.php">Выйти</a>
 			<?php 
-				$sql = $pdo->prepare("SELECT * FROM first_screen, about, review, gallery");
+				$sql = $pdo->prepare("SELECT * FROM first_screen, about, gallery");
 				$sql->execute();
 				$res=$sql->fetch(PDO::FETCH_OBJ);
 			?>
@@ -95,7 +95,10 @@
 			<article class="about">
 				<div class="p">
 					<h2>О нас</h2>
-					<p><input type="text" name="description" size="60" style="height: 432px" value="<?php echo $res->description ?>"></p>
+					<p>
+						<pre><textarea name="description" id="description" cols="60" rows="19" wrap="soft" style="resize: none; background:none"><?php echo $res->description ?></textarea></pre>
+					</p>
+				
 				</div>
 
 				<img class="four img-fluid" src="../img/<?php echo $res->fourth ?>">
@@ -113,88 +116,77 @@
 
 		</div>
 
-		<form action="link/review.php" method="post">
 		<article class="review">
-				<div class="container">
+			<div class="container">
 
-		   		<h2>Отзывы</h2>
+	   		<h2>Отзывы</h2>
 
-		        <div id="carouselExample" class="carousel slide">
-				  	<div class="carousel-inner">
+	        <div id="carouselExample" class="carousel slide">
+			  	<div class="carousel-inner">
 
-					<div class="carousel-item active">
-						<div class="head">
-						    <div class="round"></div>
-						    <div class="h">
-						    	<p><input type="text" name="name" style="background: none; color: #efefef; width: 150px" value="<?php echo $res->name ?>"></p>
-						        <p class="star">
-						        	<input type="text" name="star" style="background: none; color: #D0A73E; font-size: 20px; width: 110px" value="<?php echo $res->star ?>">
-						        </p>
-						    </div>
-						    <p class="date"><input type="text" name="data" style="background: none; color: #efefef; width: 83px;" value="<?php echo $res->data ?>"></p>
-						</div>
-
-						<p class="r"><input type="text" name="view" style="background: none; color: #efefef; width: 1070px" value="<?php echo $res->view ?>"></p>
+				<div class="carousel-item active">
+					<div class="head">
+					    <div class="round"></div>
+					    <div class="h">
+					    	<p>Лиза Г.</p>
+					        <p class="star" style="color: #D0A73E; font-size: 20px">★★★★★</p>
+					    </div>
+					    <p class="date">22.08.23</p>
 					</div>
 
-					<div class="carousel-item">
-					   	<div class="head">
-						   	<div class="round"></div>
-						    <div class="h">
-						        <p><input type="text" name="names" style="background: none; width: 150px; color: #efefef" value="<?php echo $res->names ?>"></p>
-						        <p class="star">
-						            <input type="text" name="stars" style="background: none; color: #D0A73E; font-size: 20px; width: 110px;" value="<?php echo $res->stars ?>">
-						        </p>
-						    </div>
-						    <p class="date"><input type="text" name="datas" style="background: none; color: #efefef; width: 83px" value="<?php echo $res->datas ?>"></p>
-						</div>
-
-						    <p class="r"><input type="text" name="views" style="background: none; color: #efefef; width: 1070px" value="<?php echo $res->views ?>"></p>
-					</div>
-					<div class="carousel-item">
-					    <div class="head">
-						    <div class="round"></div>
-						    <div class="h">
-						        <p><input type="text" name="nameth" style="background: none; width: 150px; color: #efefef" value="<?php echo $res->nameth ?>"></p>
-						        <p class="star">
-						            <input type="text" name="starth" style="color: #D0A73E; font-size: 20px; background:none; width: 110px" value="<?php echo $res->starth ?>">
-						        </p>
-						    </div>
-						    <p class="date"><input type="text" name="datath" style="background: none; width: 83px" value="<?php echo $res->datath ?>"></p>
-						</div>
-
-						<p class="r"><input type="text" name="viewth" style="background: none; color: #efefef; width: 1070px" value="<?php echo $res->viewth ?>"></p>
-					</div>
-					<div class="carousel-item">
-					    <div class="head">
-						    <div class="round"></div>
-						    <div class="h">
-						        <p><input type="text" name="namef" style="background: none; width: 150px; color: #efefef" value="<?php echo $res->namef ?>"></p>
-						        <p class="star">
-						            <input type="text" name="starf" style="color: #D0A73E; font-size: 20px; background: none; width: 110px" value="<?php echo $res->starf ?>">
-						        </p>
-						    </div>
-						    <p class="date"><input type="text" name="dataf"  style="background: none; width: 83px; color: #efefef" value="<?php echo $res->dataf ?>"></p>
-						</div>
-
-						<p class="r"><input type="text" name="viewf" style="background: none; color: #efefef; width: 1070px" value="<?php echo $res->viewf ?>"></p>
-					</div>
-					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
+					<p class="r">Отличное место. Вкусные напитки. Выбор кофе, как холодного, так и горячего. Коктейли вкусные. Есть десерты, <br>мороженое. Работает кондиционер, удобные столики. Оформление в стиле истории города, рисунки Натальи <br>Пантелеевой. Это круто. Можно посидеть на улице.</p>
 				</div>
 
-				</div>  
+				<div class="carousel-item">
+				   	<div class="head">
+					   	<div class="round"></div>
+					    <div class="h">
+					        <p>Андрей</p>
+					        <p class="star" style="color: #D0A73E; font-size: 20px">★★★★★</p>
+					    </div>
+					    <p class="date">25.02.23</p>
+					</div>
 
-				<input style="text-align: center; width: 340px; height: 50px; margin-left: 730px; margin-top: 50px;" name="save" type="submit" value="Сохранить">
-			</article>
-		</form>
+					    <p class="r">Отличное заведение, вкусный кофе, брали Кокосовый и Лавандовый РАФ понравился вкус, хороший <br>сбалансированный не горчит, вкусные эклеры. Гости города из Екатеринбурга!!!</p>
+				</div>
+				
+					<div class="carousel-item">
+				    <div class="head">
+					    <div class="round"></div>
+					    <div class="h">
+					        <p>Илья К.</p>
+					        <p class="star"  style="color: #D0A73E; font-size: 20px">★★★★★</p>
+					    </div>
+					    <p class="date">19.12.22</p>
+					</div>
+
+					<p class="r">Чисто. Тепло. ( Температура на улице -22 ) Уютно. Хороший кофе на любой вкус. Девушке продавцу - спасибо. За <br>оформление интерьера - лайк.</p>
+				</div>
+				<div class="carousel-item">
+				    <div class="head">
+					    <div class="round"></div>
+					    <div class="h">
+					        <p>Евгений Кузнецов</p>
+					        <p class="star" style="color: #D0A73E; font-size: 20px">★★★★★</p>
+					    </div>
+					    <p class="date">20.05.22</p>
+					</div>
+
+					<p class="r">Уютная кофейня. Со своей атмосферой, отсылом к истории города. Одно из лучших мест в своем роде)</p>
+				</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+
+			</div>  
+		</article>
 			
 		    <article class="form">
 		    	<div class="container">
@@ -278,7 +270,7 @@
 	
 	<?php 
 		else:
-			echo '<h2 style="text-align: center; margin-top: 30px">Не нарушайте 270 ст.</h2>';
+			echo '<h2 style="text-align: center; margin-top: 30px">Не нарушайте 272 ст. УК РФ</h2>';
 			echo '<a href="../main.php"><p style="text-align: center">На главную</p></a>';
 
 		endif 

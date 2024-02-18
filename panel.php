@@ -40,7 +40,7 @@ if (!empty($_SESSION["login"])) :
 			</ul>
 			<?php 
 				else:
-					echo '<h2 style="text-align: center; margin-top: 30px">Не нарушайте 270 ст.</h2>';
+					echo '<h2 style="text-align: center; margin-top: 30px">Не нарушайте 272 ст. УК РФ</h2>';
 					echo '<a href="main.php"><p style="text-align: center">На главную</p></a>';
 			?>	
 			<?php	endif		?>	

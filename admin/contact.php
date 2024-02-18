@@ -54,12 +54,16 @@
 
 					<p class="time"><b>Время работы:</b></p>
 
-					<p><input type="text" style="width:230px; height: 85px; background: none" name="time_of_work" value="<?php echo $result->time_of_work ?>">
+					<p>
+						<textarea name="time_of_work" id="time_of_work" cols="30" rows="4" style="background: none; resize: none;"><?php echo $result->time_of_work ?></textarea>
+						
 					</p>
 
 					<p class="adress"><b>Адреса:</b></p>
 
-					<p><input type="text" style="width:230px; height: 85px; background: none" name="adress" value="<?php echo $result->adress ?>"></p>
+					<p>
+						<textarea name="adress" id="adress" cols="30" rows="3" style="background: none; resize: none;"><?php echo $result->adress ?></textarea>
+					</p>
 
 					<p class="soc"><b>Наши соц. сети:</b></p>
 
@@ -86,7 +90,7 @@
 
 	<?php 
 		else:
-			echo '<h2 style="text-align: center; margin-top: 30px">Не нарушайте 270 ст.</h2>';
+			echo '<h2 style="text-align: center; margin-top: 30px">Не нарушайте 272 ст. УК РФ</h2>';
 			echo '<a href="../main.php"><p style="text-align: center">На главную</p></a>';
 
 		endif 

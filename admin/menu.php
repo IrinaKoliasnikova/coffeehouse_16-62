@@ -60,9 +60,9 @@
 				      <div class="accordion-body">
 				        <div class="coffee-1">
 							<div class="ing" style="height: auto;">
-								<input type="text" name="dishf" style="background: none" class="n" value="<?php echo $resul->dishf ?>">				
-								<input type="text" name="volumef" style="background: none" class="v" value="<?php echo $resul->volumef ?>">
-								<input type="text" name="costf" style="width: 73px; background: none" class="c" value="<?php echo $resul->costf ?>">
+								<textarea name="dishf" id="dishf" class="n" rows="18" style="background: none; resize: none; width: 285px; padding: 0px;"><?php echo $resul->dishf ?></textarea>
+								<textarea name="volumef" id="volumef" class="n" rows="18" style="background: none; resize: none; width: 130px; padding: 0px"><?php echo $resul->volumef ?></textarea>
+								<textarea name="costf" id="costf" class="n" cols="8" rows="18" style="background: none; resize: none; width: 120px;"><?php echo $resul->costf ?></textarea>
 							</div>
 				      </div>
 				    </div>
@@ -77,9 +77,11 @@
 				    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
 				      <div class="accordion-body">
 				        <div class="ing" style="height: auto;">
-							<input type="text" name="dishs" style="background: none" class="n" value="<?php echo $resul->dishs ?>">				
-							<input type="text" name="volumes" style="background: none" class="v" value="<?php echo $resul->volumes ?>">
-							<input type="text" name="costs" style="width: 73px; background: none" class="c" value="<?php echo $resul->costs ?>">
+							
+								<textarea name="dishs" id="dishs" class="n" cols="30" rows="18" style="background: none; resize: none; width: 285px;"><?php echo $resul->dishs ?></textarea>
+								<textarea name="volumes" id="volumes" class="n" cols="9" rows="18" style="background: none; resize: none; width: 130px;"><?php echo $resul->volumes ?></textarea>
+								<textarea name="costs" id="costs" class="n" cols="8" rows="18" style="background: none; resize: none; width: 120px;"><?php echo $resul->costs ?></textarea>
+							
 						</div>
 
 				      </div>
@@ -94,9 +96,11 @@
 				    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
 				      <div class="accordion-body">
 				        <div class="ing" style="height: auto;">
-							<input type="text" name="dishth" style="background: none" class="n" value="<?php echo $resul->dishth ?>">				
-							<input type="text" name="volumeth" style="background: none" class="v" value="<?php echo $resul->volumeth ?>">
-							<input type="text" name="costth" style="width: 73px; background: none" class="c" value="<?php echo $resul->costth ?>">
+							
+								<textarea name="dishth" id="dishth" class="n" cols="30" rows="18" style="background: none; resize: none; width: 285px;"><?php echo $resul->dishth ?></textarea>
+								<textarea name="volumeth" id="volumeth" class="n" cols="9" rows="18" style="background: none; resize: none; width: 130px;"><?php echo $resul->volumeth ?></textarea>
+								<textarea name="costth" id="costth" class="n" cols="8" rows="18" style="background: none; resize: none; width: 120px;"><?php echo $resul->costth ?></textarea>
+							
 						</div>
 				      </div>
 				    </div>
@@ -111,9 +115,11 @@
 				    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show">
 				      <div class="accordion-body">
 				        	<div class="ing" style="height: auto;">
-								<input type="text" name="dishfo" style="background: none" class="n" value="<?php echo $resul->dishfo ?>">				
-								<input type="text" name="volumefo" style="background: none" class="v" value="<?php echo $resul->volumefo ?>">
-								<input type="text" name="costfo" style="width: 73px; background: none" class="c" value="<?php echo $resul->costfo ?>">
+								
+								<textarea name="dishfo" id="dishfo" class="n" cols="30" rows="18" style="background: none; resize: none; width: 285px;"><?php echo $resul->dishfo ?></textarea>
+								<textarea name="volumefo" id="volumefo" class="n" cols="9" rows="18" style="background: none; resize: none; width: 130px;"><?php echo $resul->volumefo ?></textarea>
+								<textarea name="costfo" id="costfo" class="n" cols="8" rows="18" style="background: none; resize: none; width: 120px;"><?php echo $resul->costfo ?></textarea>
+							
 							</div>
 				      </div>
 				    </div>
@@ -133,10 +139,10 @@
 				    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
 				      <div class="accordion-body">
 				        <div class="ing" style="height: auto;">
-							<input type="text" name="dishfi" style="background: none" class="n" value="<?php echo $resul->dishf ?>">				
-							<input type="text" name="volumefi" style="background: none" class="v" value="<?php echo $resul->volumefi ?>">
-							<input type="text" name="costfi" style="width: 77px; background: none" class="c" value="<?php echo $resul->costfi ?>">
-						</div>
+							<textarea name="dishfi" id="dishfi" class="n" rows="18" style="background: none; resize: none; width: 300px;"><?php echo $resul->dishfi ?></textarea>
+							<textarea name="volumefi" id="volumefi" class="n" rows="18" style="background: none; resize: none; width: 140px;"><?php echo $resul->volumefi ?></textarea>
+							<textarea name="costfi" id="costfi" class="n" rows="18" style="background: none; resize: none; width: 140px;"><?php echo $resul->costfi ?></textarea>
+							</div>
 						</div>	
 				      </div>
 				    </div>
@@ -150,9 +156,9 @@
 				    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
 				      <div class="accordion-body desert">
 				        <div class="ing" style="height: auto;">
-							<input type="text" name="dishsix" style="background: none" class="n" value="<?php echo $resul->dishsix ?>">				
-							<input type="text" name="costsx" style="width: 77px; background: none" class="cost" value="<?php echo $resul->costsix ?>">
-						</div>
+							<textarea name="dishsix" id="dishsix" class="n" cols="30" rows="18" style="background: none; resize: none; width: 285px;"><?php echo $resul->dishsix ?></textarea>
+							<textarea name="costsix" id="costsix" class="n" cols="8" rows="18" style="background: none; resize: none; width: 120px;"><?php echo $resul->costsix ?></textarea>
+							</div>
 				      </div>
 				    </div>
 				  </div>
@@ -165,8 +171,10 @@
 				    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				      <div class="accordion-body add">
 				       	<div class="ing" style="height: auto;">
-							<input type="text" name="dishse" style="background: none" class="n" value="<?php echo $resul->dishse ?>">				
-							<input type="text" name="costse" style="width: 77px; background: none" class="cost" value="<?php echo $resul->costse ?>">
+							<div class="ing" style="height: auto;">
+								<textarea name="dishse" id="dishse" class="n" cols="30" rows="18" style="background: none; resize: none; width: 285px;"><?php echo $resul->dishse ?></textarea>
+								<textarea name="costse" id="costse" class="n" cols="8" rows="18" style="background: none; resize: none; width: 120px;"><?php echo $resul->costse ?></textarea>
+							</div>
 						</div>
 				      </div>
 				    </div>
